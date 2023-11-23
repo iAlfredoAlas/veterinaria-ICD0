@@ -7,6 +7,8 @@ import lombok.Setter;
 import org.hibernate.annotations.SQLDelete;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "empleado", schema = "administracion")
@@ -48,12 +50,20 @@ public class Empleado {
     @ManyToOne(optional = false, targetEntity = EspecialidadMedica.class)
     private EspecialidadMedica idEspecialidadMedica;
 
-    @JoinColumn(name = "id_clinica", referencedColumnName = "id_clinica", foreignKey = @ForeignKey(name = "fk_empleado_clinica"))
+    @JoinColumn(name = "id_clinica", referencedColumnName = "id_clinica", foreignKey = @ForeignKey(name = "FK_empleado_clinica"))
     @ManyToOne(optional = false, targetEntity = Clinica.class)
     private Clinica idClinica;
 
-    @JoinColumn(name = "id_distrito", referencedColumnName = "id_distrito", foreignKey = @ForeignKey(name = "fk_empleado_distrito"))
+    @JoinColumn(name = "id_distrito", referencedColumnName = "id_distrito", foreignKey = @ForeignKey(name = "FK_empleado_distrito"))
     @ManyToOne(optional = false, targetEntity = Distrito.class)
     private Distrito idDistito;
+
+    @ManyToMany(fetch = FetchType.EAGER, targetEntity = Rol.class)
+    @JoinTable(name = "empleado_rol", schema = "administracion", joinColumns = {
+            @JoinColumn(name = "id_empleado", referencedColumnName = "id_empleado") }, inverseJoinColumns = {
+            @JoinColumn(name = "id_rol", referencedColumnName = "id_rol") })
+    private List<Rol> rolList = new ArrayList<>();
+
+
 
 }
