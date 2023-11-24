@@ -30,6 +30,11 @@ public class Cita {
     @Basic(optional = false)
     private Boolean estadoCita = Boolean.TRUE;
 
+    @Column(name = "motivo_cita")
+    @Enumerated(EnumType.STRING)
+    @Basic(optional = false)
+    private MotivoCita motivoCita;
+
     @JoinColumn(name = "id_mascota", referencedColumnName = "id_mascota", foreignKey = @ForeignKey(name = "FK_cita_mascota"))
     @ManyToOne(targetEntity = Mascota.class)
     private Mascota idMascota;
