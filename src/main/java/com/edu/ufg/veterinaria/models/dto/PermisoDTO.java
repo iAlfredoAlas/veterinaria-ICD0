@@ -30,6 +30,7 @@ public class PermisoDTO {
     @JsonIgnore
     private List<RolDTO> rolList = new ArrayList<>();
 
+    @NotNull(message = "El campo solo puede ser null")
     private MenuDTO idMenu;
 
 }
