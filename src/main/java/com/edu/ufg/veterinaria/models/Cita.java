@@ -1,5 +1,6 @@
 package com.edu.ufg.veterinaria.models;
 
+import com.edu.ufg.veterinaria.utils.EMotivoCita;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,7 +34,7 @@ public class Cita {
     @Column(name = "motivo_cita")
     @Enumerated(EnumType.STRING)
     @Basic(optional = false)
-    private MotivoCita motivoCita;
+    private EMotivoCita EMotivoCita;
 
     @JoinColumn(name = "id_mascota", referencedColumnName = "id_mascota", foreignKey = @ForeignKey(name = "FK_cita_mascota"))
     @ManyToOne(targetEntity = Mascota.class)

@@ -2,7 +2,7 @@ package com.edu.ufg.veterinaria.models.dto;
 
 import com.edu.ufg.veterinaria.models.Empleado;
 import com.edu.ufg.veterinaria.models.Mascota;
-import com.edu.ufg.veterinaria.models.MotivoCita;
+import com.edu.ufg.veterinaria.utils.EMotivoCita;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,7 +27,7 @@ public class CitaDTO {
     private Boolean estadoCita = Boolean.TRUE;
 
     @NotNull(message = "El campo solo puede ser null")
-    private MotivoCita motivoCita;
+    private EMotivoCita EMotivoCita;
 
     @NotNull(message = "El campo solo puede ser null")
     private Mascota idMascota;
