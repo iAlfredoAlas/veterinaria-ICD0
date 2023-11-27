@@ -38,7 +38,7 @@ public class EmpleadoDTO {
     @NotBlank
     private String contrasena;
 
-    @NotNull(message = "El campo solo puede ser VERDADERO o FALSO")
+    @NotNull(message = "El campo solo puede ser TRUE o FALSE")
     private Boolean estadoEmpleado = Boolean.TRUE;
 
     @NotNull(message = "El campo solo puede ser null")

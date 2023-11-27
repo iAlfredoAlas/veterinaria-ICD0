@@ -23,7 +23,7 @@ public class MenuDTO {
     @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,39}$", message = "El campo solo puede tener como máximo 40 caracteres alfabéticos")
     private String nombreMenu;
 
-    @NotNull(message = "El campo solo puede ser VERDADERO o FALSO")
+    @NotNull(message = "El campo solo puede ser TRUE o FALSE")
     private Boolean estadoMenu = Boolean.TRUE;
 
     @NotBlank(message = "El campo no puede quedar vacío")
