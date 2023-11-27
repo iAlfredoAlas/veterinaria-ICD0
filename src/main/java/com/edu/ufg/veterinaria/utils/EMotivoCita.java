@@ -1,6 +1,6 @@
-package com.edu.ufg.veterinaria.models;
+package com.edu.ufg.veterinaria.utils;
 
-public enum MotivoCita {
+public enum EMotivoCita {
 
     CONTROL_VACUNAS("Control de vacunas"),
     REVISION_GENERAL("Revisión general"),
@@ -20,7 +20,7 @@ public enum MotivoCita {
 
     private final String motivo;
 
-    MotivoCita(String motivo) {
+    EMotivoCita(String motivo) {
         this.motivo = motivo;
     }
 
