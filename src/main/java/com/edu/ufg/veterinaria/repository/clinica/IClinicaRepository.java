@@ -2,11 +2,11 @@ package com.edu.ufg.veterinaria.repository.clinica;
 
 import com.edu.ufg.veterinaria.models.Clinica;
 import com.edu.ufg.veterinaria.repository.IGenericRepository;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface IClinicaRepository extends IGenericRepository<Clinica, Long> {
 
-    List<Clinica> findByEstadoClinica (Boolean estadoClinica);
+    Page<Clinica> findByEstadoClinica (Pageable pageable, Boolean estadoClinica);
 
 }

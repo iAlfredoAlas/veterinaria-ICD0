@@ -2,11 +2,11 @@ package com.edu.ufg.veterinaria.repository.catalogo;
 
 import com.edu.ufg.veterinaria.models.CategoriaMascota;
 import com.edu.ufg.veterinaria.repository.IGenericRepository;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface ICategoriaMascotaRepository extends IGenericRepository<CategoriaMascota, Long> {
 
-    List<CategoriaMascota> findByEstadoCategoriaMascota(Boolean estadoCategoriaMascota);
+    Page<CategoriaMascota> findByEstadoCategoriaMascota(Pageable pageable, Boolean estadoCategoriaMascota);
 
 }
