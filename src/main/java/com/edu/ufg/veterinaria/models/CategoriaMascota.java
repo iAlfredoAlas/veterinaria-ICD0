@@ -27,6 +27,6 @@ public class CategoriaMascota {
 
     @Column(name = "estado_categoria_mascota")
     @Basic(optional = false)
-    private Boolean estado_categoria_mascota = Boolean.TRUE;
+    private Boolean estadoCategoriaMascota = Boolean.TRUE;
 
 }
