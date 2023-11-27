@@ -17,7 +17,7 @@ public class DepartamentoDTO {
     private Long idDepartamento;
 
     @NotBlank(message = "EL campo no puede quedar vacío")
-    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,19}+$", message = "El campo solo puede tener como máximo 20 caracteres alfabéticos")
+    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,19}$", message = "El campo solo puede tener como máximo 20 caracteres alfabéticos")
     private String nombreDepartamento;
 
 }

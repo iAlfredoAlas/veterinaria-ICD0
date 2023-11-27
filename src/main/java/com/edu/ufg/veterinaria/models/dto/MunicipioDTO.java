@@ -18,7 +18,7 @@ public class MunicipioDTO {
     private Long idMunicipio;
 
     @NotBlank(message = "EL campo no puede quedar vacío")
-    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,24}+$", message = "El campo solo puede tener como máximo 25 caracteres alfabéticos")
+    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,24}$", message = "El campo solo puede tener como máximo 25 caracteres alfabéticos")
     private String nombreMunicipio;
 
     @NotNull(message = "El campo solo puede ser null")

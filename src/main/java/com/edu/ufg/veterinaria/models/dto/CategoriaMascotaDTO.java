@@ -20,7 +20,7 @@ public class CategoriaMascotaDTO {
         private Long idCategoriaMascota;
 
         @NotBlank(message = "El nombre no puede quedar en vacío")
-        @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,39}+$", message = "El campo solo puede tener como máximo 40 caracteres alfabéticos")
+        @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,39}$", message = "El campo solo puede tener como máximo 40 caracteres alfabéticos")
         private String nombreCategoriaMascota;
 
         @NotNull(message = "El campo solo puede ser VERDADERO o FALSO")
