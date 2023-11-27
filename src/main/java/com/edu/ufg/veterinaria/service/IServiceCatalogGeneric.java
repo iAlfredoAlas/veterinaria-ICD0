@@ -7,8 +7,6 @@ public interface IServiceCatalogGeneric<T, ID> {
 
     public Page<T> getAll(Pageable pageable);
 
-    public Page<T> findCustom(Pageable pageable, Boolean flat);
-
     public T findById(Long id);
 
     public T add(T model);
