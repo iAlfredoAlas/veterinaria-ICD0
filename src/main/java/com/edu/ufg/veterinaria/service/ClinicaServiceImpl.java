@@ -37,12 +37,13 @@ public class ClinicaServiceImpl implements IClinicaService {
 
     @Override
     public Clinica add(Clinica model) {
+        log.info("Save data");
         return clinicaRepository.save(model);
     }
 
     @Override
     public Clinica update(Clinica model, Long id) {
-        log.info("Save data");
+        log.info("Update data");
         Clinica objClinica = clinicaRepository.findById(id).get();
         objClinica.setNombreClinica(model.getNombreClinica());
         objClinica.setComplementoDireccionClinica(model.getComplementoDireccionClinica());
@@ -53,7 +54,7 @@ public class ClinicaServiceImpl implements IClinicaService {
 
     @Override
     public void deleteLog(Long id) {
-        log.info("Update data");
+        log.info("Delete data");
         clinicaRepository.deleteById(id);
     }
 }
