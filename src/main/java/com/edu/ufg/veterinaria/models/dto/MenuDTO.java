@@ -1,14 +1,11 @@
 package com.edu.ufg.veterinaria.models.dto;
 
-import com.edu.ufg.veterinaria.models.Menu;
-import com.edu.ufg.veterinaria.models.Permiso;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
