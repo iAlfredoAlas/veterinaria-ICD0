@@ -1,12 +1,10 @@
 package com.edu.ufg.veterinaria.models.dto;
 
-import com.edu.ufg.veterinaria.models.Distrito;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
