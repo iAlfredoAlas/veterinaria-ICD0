@@ -1,12 +1,10 @@
 package com.edu.ufg.veterinaria.models.dto;
 
-import com.edu.ufg.veterinaria.models.Permiso;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -25,7 +23,7 @@ public class RolDTO {
     @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,39}$", message = "El campo solo puede tener como máximo 40 caracteres alfabéticos")
     private String nombreRol;
 
-    @NotNull(message = "El campo solo puede ser VERDADERO o FALSO")
+    @NotNull(message = "El campo solo puede ser TRUE o FALSE")
     private Boolean estadoRol = Boolean.TRUE;
 
     private List<PermisoDTO> permisoList = new ArrayList<>();
