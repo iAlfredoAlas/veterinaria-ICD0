@@ -19,8 +19,12 @@ import java.util.List;
 @Setter
 public class Rol {
 
+    @Id
+    @Column(name = "id_rol")
     private Long idRol;
 
+    @Column(name = "nombre_rol")
+    @Basic(optional = false)
     private String nombreRol;
 
     @Column(name = "estado_rol")
