@@ -20,7 +20,7 @@ public class Cita {
 
     @Id
     @Column(name = "id_cita")
-    private Long cita;
+    private Long idCita;
 
     @Column(name = "fecha_cita")
     @Basic(optional = false)
