@@ -28,7 +28,7 @@ public class UsuarioDTO {
     private String correousuario;
 
     @NotBlank(message = "EL campo no puede quedar vacío")
-    @Pattern(regexp = "^[0-9]{8,11}$", message = "El campo solo puede tener como máximo 40 caracteres alfabéticos")
+    @Pattern(regexp = "^[0-9]{8,11}$", message = "El campo solo puede tener como máximo 11 caracteres númericos")
     private String telefonoUsuario;
 
     @NotBlank(message = "EL campo no puede quedar vacío")
