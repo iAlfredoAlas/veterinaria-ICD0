@@ -1,11 +1,8 @@
 package com.edu.ufg.veterinaria.controller.catalogo;
 
 import com.edu.ufg.veterinaria.controller.IGenericCatalogController;
-import com.edu.ufg.veterinaria.controller.IGenericController;
 import com.edu.ufg.veterinaria.models.Distrito;
-import com.edu.ufg.veterinaria.models.Municipio;
 import com.edu.ufg.veterinaria.models.dto.DistritoDTO;
-import com.edu.ufg.veterinaria.models.dto.MunicipioDTO;
 import com.edu.ufg.veterinaria.service.IDistritoService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
