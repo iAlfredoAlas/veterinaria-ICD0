@@ -2,9 +2,7 @@ package com.edu.ufg.veterinaria.controller.catalogo;
 
 import com.edu.ufg.veterinaria.controller.IGenericController;
 import com.edu.ufg.veterinaria.models.CategoriaMascota;
-import com.edu.ufg.veterinaria.models.Distrito;
 import com.edu.ufg.veterinaria.models.dto.CategoriaMascotaDTO;
-import com.edu.ufg.veterinaria.models.dto.DistritoDTO;
 import com.edu.ufg.veterinaria.service.ICategoriaMascotaService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
