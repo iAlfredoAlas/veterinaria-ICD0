@@ -59,7 +59,8 @@ public class MenuServiceImpl implements IMenuService {
         menuRepository.deleteById(id);
     }
 
-    public List<Menu> getAllMenuSuperior(){
+    @Override
+    public List<Menu> getAllMenu() {
         log.info("Show Menu Superior");
         return menuRepository.findBySuperiorMenus();
     }
