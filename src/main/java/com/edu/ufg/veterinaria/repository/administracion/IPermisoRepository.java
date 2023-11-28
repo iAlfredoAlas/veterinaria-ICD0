@@ -7,6 +7,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface IPermisoRepository extends IGenericRepository<Permiso, Long> {
 
-    Page<Permiso> findyByEstadoPermiso (Pageable pageable, Boolean estadoPermiso);
+    Page<Permiso> findByEstadoPermiso (Pageable pageable, Boolean estadoPermiso);
 
 }

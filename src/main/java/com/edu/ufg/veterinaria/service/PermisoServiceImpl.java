@@ -26,7 +26,7 @@ public class PermisoServiceImpl implements IPermisoService {
     @Override
     public Page<Permiso> findCustom(Pageable pageable, Boolean flat) {
         log.info("Show actives");
-        return permisoRepository.findyByEstadoPermiso(pageable, flat);
+        return permisoRepository.findByEstadoPermiso(pageable, flat);
     }
 
     @Override
