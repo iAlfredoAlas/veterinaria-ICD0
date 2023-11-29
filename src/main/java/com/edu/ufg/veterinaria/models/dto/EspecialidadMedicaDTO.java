@@ -24,7 +24,7 @@ public class EspecialidadMedicaDTO {
     private String nombreEspecialidadMedica;
 
     @NotBlank(message = "EL campo no puede quedar vacío")
-    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,39}$", message = "El campo solo puede tener como máximo 40 caracteres alfabéticos")
+    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ,. ]{0,79}$", message = "El campo solo puede tener como máximo 80 caracteres alfabéticos")
     private String descripcionEspecialidadMedica;
 
     @NotNull(message = "El campo solo puede ser TRUE o FALSE")

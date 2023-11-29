@@ -54,7 +54,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
         objEmpleado.setComplementoDireccion(model.getComplementoDireccion());
         objEmpleado.setCorreoEmpleado(model.getCorreoEmpleado());
         objEmpleado.setTelefonoEmpleado(model.getTelefonoEmpleado());
-        if (model.getContrasena() != null && !model.getContrasena().isBlank()){
+        if (model.getContrasena() != null && !model.getContrasena().isBlank()) {
             objEmpleado.setContrasena(passwordEncoder.encode(model.getContrasena()));
         }
         objEmpleado.setEstadoEmpleado(model.getEstadoEmpleado());
