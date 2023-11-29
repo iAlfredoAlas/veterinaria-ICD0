@@ -12,8 +12,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 
 @EnableWebSecurity
 @PropertySource("classpath:application.properties")
@@ -43,8 +47,7 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
         }).and();
 
         http.authorizeRequests().antMatchers("/actuator/**").permitAll()
-                .antMatchers("/auth/authenticate").permitAll()
-                .antMatchers("/**").permitAll()
+                .antMatchers("/login/authenticate").permitAll()
                 .anyRequest().authenticated();
         http.addFilterBefore(requestFilter, UsernamePasswordAuthenticationFilter.class);
     }
@@ -58,6 +61,19 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public CorsFilter corsFilter() {
+        String[] origins = allowedOrigins.split(",");
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowCredentials(true);
+        config.setAllowedOrigins(Arrays.asList(origins));
+        config.setAllowedHeaders(Arrays.asList("*"));
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+        source.registerCorsConfiguration("/**", config);
+        return new CorsFilter(source);
     }
 
 }

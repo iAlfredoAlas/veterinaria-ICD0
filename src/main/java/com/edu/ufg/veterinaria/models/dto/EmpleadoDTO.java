@@ -1,5 +1,6 @@
 package com.edu.ufg.veterinaria.models.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -52,4 +53,12 @@ public class EmpleadoDTO {
 
     private List<RolDTO> rolList = new ArrayList<>();
 
+    @JsonIgnore
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
 }
